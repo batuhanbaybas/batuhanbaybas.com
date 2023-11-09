@@ -16,7 +16,7 @@ const BlogItem = ({ title, content, date, id }: BlogItemProps) => {
   const navigate = useNavigate();
 
   return (
-    <Col className="blog-card" xs={24} sm={24} md={12}>
+    <Col className="blog-card" xs={24} sm={24} md={8}>
       <Card
         extra={dayjs(date).format("DD/MM/YYYY")}
         bodyStyle={{ height: "85%" }}

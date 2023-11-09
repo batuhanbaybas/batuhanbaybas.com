@@ -9,22 +9,13 @@ const { Meta } = Card;
 type BlogItemProps = {
   title: string;
   description: string;
-  date: string;
   link: string;
-  id: string;
   image: string;
 };
 
-const ProjectItem = ({
-  title,
-  description,
-  date,
-  link,
-  image,
-  id
-}: BlogItemProps) => {
+const ProjectItem = ({ title, description, link, image }: BlogItemProps) => {
   return (
-    <Col className="project-card" xs={12} sm={12} md={12}>
+    <Col className="project-card" xs={24} sm={24} md={8}>
       <Card
         cover={image ? image : <Empty />}
         className="h-full"
