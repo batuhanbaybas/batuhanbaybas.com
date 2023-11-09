@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
 import MainLayout from "../../components/layouts/main/Main";
-import { getRequests } from "../../requests/request";
 import { Row } from "antd";
 
 import "./style.scss";
 import BlogItem from "../../components/blog-item/BlogItem";
+import useFetch from "../../hooks/useFetch";
+import Loading from "../../components/loading/Loading";
+import Error from "../../components/error/Error";
 type blogItem = {
   _id: string;
   title: string;
@@ -14,19 +15,12 @@ type blogItem = {
 };
 
 const Blogs = () => {
-  const [data, setData] = React.useState<any>([]);
+  const { data, error, loading } = useFetch({ url: "/post" });
 
-  useEffect(() => {
-    getData();
-  }, []);
-
-  const getData = async () => {
-    const { data }: any = await getRequests("/post");
-    setData(data);
-    console.log(data);
-  };
   return (
     <MainLayout>
+      {error && <Error />}
+      <Loading loading={loading} />
       <Row className="h-85" gutter={[24, 4]}>
         {data?.posts?.map((item: blogItem) => (
           <BlogItem
