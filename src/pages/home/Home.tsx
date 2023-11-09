@@ -50,7 +50,9 @@ const Home = () => {
             <Button
               size="large"
               onClick={() => window.open(item.url, item.target)}
-              type={item.type as any}
+              type={
+                item.type as "primary" | "default" | "dashed" | "link" | "text"
+              }
               href={item.url}
               icon={item.icon}
               danger={item.danger}
