@@ -6,7 +6,7 @@ import Error from "../../components/error/Error";
 import Loading from "../../components/loading/Loading";
 
 const Projects = () => {
-  const { data, error, loading } = useFetch({ url: "/project" });
+  const { data, error, loading } = useFetch({ url: "/project/all" });
 
   return (
     <MainLayout>
