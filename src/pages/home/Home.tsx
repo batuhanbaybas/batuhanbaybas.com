@@ -7,6 +7,7 @@ import { Button, Col, Row, Typography } from "antd";
 type IconMenu = {
   icon: React.ReactNode;
   url: string;
+  target?: string;
   type: string;
   danger?: boolean;
 };
@@ -14,17 +15,20 @@ type IconMenu = {
 const iconMenu: IconMenu[] = [
   {
     icon: <BiLogoLinkedin size={24} />,
-    url: "",
+    url: "https://www.linkedin.com/in/batuhan-baybas",
+    target: "_blank",
     type: "primary"
   },
   {
     icon: <FaGithub size={24} />,
-    url: "",
+    url: "https://github.com/batuhanbaybas",
+    target: "_blank",
     type: "default"
   },
   {
     icon: <BiLogoGmail size={24} />,
-    url: "",
+    url: "mailto:b.baybas@gmail.com",
+    target: "_blank",
     type: "primary",
     danger: true
   }
@@ -45,6 +49,7 @@ const Home = () => {
           <Col key={index}>
             <Button
               size="large"
+              onClick={() => window.open(item.url, item.target)}
               type={item.type as any}
               href={item.url}
               icon={item.icon}
