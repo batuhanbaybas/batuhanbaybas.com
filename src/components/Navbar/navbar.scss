@@ -1,0 +1,22 @@
+@import "../../styles/variables.scss";
+
+.navbar {
+display: flex;
+justify-content: center;
+align-items: center;
+box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.50);
+}
+
+.menu-item {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    a {
+        text-decoration: none;
+        color: $text-light;
+        font-weight: 500;
+        font-size: 1rem;
+    
+    }
+
+}
