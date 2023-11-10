@@ -18,16 +18,15 @@ const BlogItem = ({ title, content, date, id }: BlogItemProps) => {
     <Col xs={24} sm={24} md={12} lg={8}>
       <Card
         style={{
-          cursor: "pointer"
+          cursor: "pointer",
+          height: "300px"
         }}
         extra={dayjs(date).format("DD/MM/YYYY")}
         onClick={() => navigate(`/blog/${id}`)}
-        bodyStyle={{ paddingBottom: "0px" }}
         title={title}
-        className="h-full"
         bordered={false}
       >
-        {trancate(content)}
+        {trancate(content, 300)}
       </Card>
     </Col>
   );

@@ -16,12 +16,14 @@ const ProjectItem = ({ title, description, link, image }: BlogItemProps) => {
   return (
     <Col xs={24} sm={24} md={12} lg={8}>
       <Card
+        style={{
+          height: "300px"
+        }}
         cover={image ? image : <Empty />}
-        className="h-full"
         bodyStyle={{ paddingTop: "0px", paddingBottom: "0px" }}
         bordered={false}
       >
-        <Meta title={title} description={trancate(description, 100)} />
+        <Meta title={title} description={trancate(description, 50)} />
       </Card>
     </Col>
   );

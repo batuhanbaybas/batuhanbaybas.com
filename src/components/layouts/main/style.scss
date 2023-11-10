@@ -2,9 +2,9 @@
 
 
 @mixin baseWrapper {
-   
-    background-color: $background-dark;
     min-height: calc(100vh - 64px);
+
+    background-color: $background-dark;
     h1 {
         color: $text-light !important;
     }
@@ -42,6 +42,5 @@
 
 .contentWrapper {
     @include baseWrapper;
-    height: calc(100vh - 160px);
     padding: 3rem;
 }
