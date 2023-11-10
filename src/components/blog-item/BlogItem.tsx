@@ -17,6 +17,9 @@ const BlogItem = ({ title, content, date, id }: BlogItemProps) => {
   return (
     <Col xs={24} sm={24} md={12} lg={8}>
       <Card
+        style={{
+          cursor: "pointer"
+        }}
         extra={dayjs(date).format("DD/MM/YYYY")}
         onClick={() => navigate(`/blog/${id}`)}
         bodyStyle={{ paddingBottom: "0px" }}
