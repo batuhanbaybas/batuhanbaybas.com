@@ -4,7 +4,6 @@ import { trancate } from "../../helpers/utils";
 import dayjs from "dayjs";
 import { useNavigate } from "react-router-dom";
 import "./style.scss";
-import CardActionButton from "../card-action-button/CardActionButton";
 type BlogItemProps = {
   title: string;
   content: string;
@@ -16,15 +15,13 @@ const BlogItem = ({ title, content, date, id }: BlogItemProps) => {
   const navigate = useNavigate();
 
   return (
-    <Col className="blog-card" xs={24} sm={24} md={8}>
+    <Col xs={24} sm={24} md={12} lg={8}>
       <Card
         extra={dayjs(date).format("DD/MM/YYYY")}
-        bodyStyle={{ height: "85%" }}
-        actions={[
-          <CardActionButton handleClickDetail={() => navigate(`/blog/${id}`)} />
-        ]}
-        className="h-full"
+        onClick={() => navigate(`/blog/${id}`)}
+        bodyStyle={{ paddingBottom: "0px" }}
         title={title}
+        className="h-full"
         bordered={false}
       >
         {trancate(content)}

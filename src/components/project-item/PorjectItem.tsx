@@ -2,7 +2,6 @@ import React from "react";
 import { Card, Col, Empty } from "antd";
 import { trancate } from "../../helpers/utils";
 import "./style.scss";
-import CardActionButton from "../card-action-button/CardActionButton";
 
 const { Meta } = Card;
 
@@ -15,12 +14,12 @@ type BlogItemProps = {
 
 const ProjectItem = ({ title, description, link, image }: BlogItemProps) => {
   return (
-    <Col className="project-card" xs={24} sm={24} md={8}>
+    <Col xs={24} sm={24} md={12} lg={8}>
       <Card
         cover={image ? image : <Empty />}
         className="h-full"
+        bodyStyle={{ paddingTop: "0px", paddingBottom: "0px" }}
         bordered={false}
-        actions={[<CardActionButton />]}
       >
         <Meta title={title} description={trancate(description, 100)} />
       </Card>
