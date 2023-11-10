@@ -49,10 +49,10 @@ const Home = () => {
           <Col key={index}>
             <Button
               size="large"
-              onClick={() => window.open(item.url, item.target)}
               type={
                 item.type as "primary" | "default" | "dashed" | "link" | "text"
               }
+              target={item.target}
               href={item.url}
               icon={item.icon}
               danger={item.danger}

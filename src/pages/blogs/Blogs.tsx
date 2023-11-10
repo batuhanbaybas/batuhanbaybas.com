@@ -15,7 +15,7 @@ type blogItem = {
 };
 
 const Blogs = () => {
-  const { data, error, loading } = useFetch({ url: "/post" });
+  const { data, error, loading } = useFetch({ url: "/post/all" });
 
   return (
     <MainLayout>

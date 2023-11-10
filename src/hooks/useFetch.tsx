@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { getRequests } from "../requests/request";
 
 type useFetchProps = {
@@ -10,7 +10,7 @@ const useFetch = ({ url }: useFetchProps) => {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<any>(null);
 
-  const getData = async () => {
+  const getData = useCallback(async () => {
     setLoading(true);
     const { data }: any = await getRequests(url)
       .then((res) => {
@@ -23,11 +23,11 @@ const useFetch = ({ url }: useFetchProps) => {
       });
 
     setData(data);
-  };
-
-  React.useEffect(() => {
-    getData();
   }, [url]);
+
+  useEffect(() => {
+    getData();
+  }, [getData]);
 
   return { data, loading, error };
 };
