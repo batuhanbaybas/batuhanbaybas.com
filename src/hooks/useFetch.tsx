@@ -15,7 +15,7 @@ const useFetch = ({ url }: useFetchProps) => {
     const { data }: any = await getRequests(url)
       .then((res) => {
         setLoading(false);
-        return res;
+        return res.data;
       })
       .catch((err) => {
         setLoading(false);

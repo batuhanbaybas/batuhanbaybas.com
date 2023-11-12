@@ -22,7 +22,7 @@ const Blogs = () => {
       {error && <Error />}
       <Loading loading={loading} />
       <Row className="h-85" gutter={[24, 24]}>
-        {data?.posts?.map((item: blogItem) => (
+        {data?.map((item: blogItem) => (
           <BlogItem
             key={item._id}
             id={item._id}

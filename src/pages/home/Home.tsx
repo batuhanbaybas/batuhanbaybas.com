@@ -38,7 +38,7 @@ const Home = () => {
   return (
     <MainLayout home={true}>
       <Typography.Title> Hello I'm Batuhan</Typography.Title>
-      <Typography.Title level={3}>I'm a MERN STACK Developer</Typography.Title>
+      <Typography.Title level={3}>I'm a Frontend Developer</Typography.Title>
       <Row
         gutter={12}
         style={{
