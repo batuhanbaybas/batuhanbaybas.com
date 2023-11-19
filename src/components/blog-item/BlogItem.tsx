@@ -26,7 +26,11 @@ const BlogItem = ({ title, content, date, id }: BlogItemProps) => {
         title={title}
         bordered={false}
       >
-        {trancate(content, 300)}
+        <div
+          dangerouslySetInnerHTML={{
+            __html: trancate(content, 200)
+          }}
+        />
       </Card>
     </Col>
   );
