@@ -1,9 +1,9 @@
 import React from "react";
-import { Card, Col } from "antd";
-import { trancate } from "../../helpers/utils";
+import { Card, Col, Typography } from "antd";
 import dayjs from "dayjs";
 import { useNavigate } from "react-router-dom";
 import "./style.scss";
+import { trancate } from "../../helpers/utils";
 type BlogItemProps = {
   title: string;
   content: string;
@@ -15,21 +15,23 @@ const BlogItem = ({ title, content, date, id }: BlogItemProps) => {
   const navigate = useNavigate();
 
   return (
-    <Col xs={24} sm={24} md={12} lg={8}>
+    <Col xs={24} sm={24}>
       <Card
-        style={{
-          cursor: "pointer",
-          height: "300px"
-        }}
+        className="word-break card"
         extra={dayjs(date).format("DD/MM/YYYY")}
         onClick={() => navigate(`/blog/${id}`)}
-        title={title}
+        title={
+          <div className="blog-item-title">
+            <Typography.Title className="typography-title" level={3}>
+              {title}
+            </Typography.Title>
+          </div>
+        }
         bordered={false}
       >
         <div
-          className="word-break"
           dangerouslySetInnerHTML={{
-            __html: content
+            __html: trancate(content, 700)
           }}
         />
       </Card>

@@ -20,6 +20,12 @@
     overflow: hidden;
     word-break: break-all;
     text-overflow: ellipsis;
-    height: 200px;
+    img {
+      display: none;
+    }
+    pre {
+        background-color: $primary-black;
+        color: $text-light;
+    }
 }
 
