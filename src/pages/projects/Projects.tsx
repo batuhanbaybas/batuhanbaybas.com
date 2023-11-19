@@ -17,9 +17,9 @@ const Projects = () => {
           <ProjectItem
             key={item._id}
             description={item.description}
-            image={item.image}
             link={item.link}
             title={item.title}
+            techs={item?.techs}
           />
         ))}
       </Row>

@@ -1,29 +1,36 @@
-import React from "react";
-import { Card, Col, Empty } from "antd";
+import { Button, Card, Col, Tag } from "antd";
 import { trancate } from "../../helpers/utils";
 import "./style.scss";
-
-const { Meta } = Card;
 
 type BlogItemProps = {
   title: string;
   description: string;
   link: string;
-  image: string;
+  techs: any[];
 };
 
-const ProjectItem = ({ title, description, link, image }: BlogItemProps) => {
+const ProjectItem = ({ title, description, techs, link }: BlogItemProps) => {
   return (
     <Col xs={24} sm={24} md={12} lg={8}>
       <Card
         style={{
           height: "300px"
         }}
-        cover={image ? image : <Empty />}
-        bodyStyle={{ paddingTop: "0px", paddingBottom: "0px" }}
         bordered={false}
+        title={
+          <Button type="link" href={link} target="_blank">
+            {title}
+          </Button>
+        }
       >
-        <Meta title={title} description={trancate(description, 50)} />
+        <div className="word-break">{trancate(description, 500)}</div>
+        <div className="tech-area">
+          {techs.map((tech: any) => (
+            <Tag key={tech._id} color="purple">
+              {tech.name}
+            </Tag>
+          ))}
+        </div>
       </Card>
     </Col>
   );

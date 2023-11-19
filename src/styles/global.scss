@@ -1,3 +1,5 @@
+@import "../styles/variables.scss";
+
 .h-full {
     height: 100%;
 }
@@ -12,3 +14,12 @@
         }
     }
 }
+
+
+.word-break {
+    overflow: hidden;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    height: 200px;
+}
+
