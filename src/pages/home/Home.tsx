@@ -37,7 +37,7 @@ const iconMenu: IconMenu[] = [
 const Home = () => {
   return (
     <MainLayout home={true}>
-      <Typography.Title> Hello I'm Batuhan</Typography.Title>
+      <Typography.Title level={1}> Hello I'm Batuhan</Typography.Title>
       <Typography.Title level={3}>I'm a Frontend Developer</Typography.Title>
       <Row
         gutter={12}

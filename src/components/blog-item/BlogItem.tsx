@@ -27,8 +27,9 @@ const BlogItem = ({ title, content, date, id }: BlogItemProps) => {
         bordered={false}
       >
         <div
+          className="word-break"
           dangerouslySetInnerHTML={{
-            __html: trancate(content, 200)
+            __html: content
           }}
         />
       </Card>

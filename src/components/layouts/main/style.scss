@@ -5,22 +5,14 @@
     min-height: calc(100vh - 64px);
 
     background-color: $background-dark;
-    h1 {
-        color: $text-light !important;
-    }
-    h2 {
-        color: $text-light !important;
-        text-align: center !important;
-    }
+  
     .single-post{
         span {
             color: $text-light !important;
         }
     }
   
-    h3 {
-        color: $text-light !important;
-    }
+   
 }
 
 .homeWrapper {
@@ -33,6 +25,7 @@
     
     h1 {
         font-size: $font-xlarge;
+        color: $text-light !important;
         @media screen and (max-width: $screen-md) {
             font-size: $font-medium;
             text-align: center;
@@ -40,13 +33,18 @@
         }
     }
     h3 {
-        font-size: $font-medium
+        font-size: $font-medium;
+        color: $text-light !important;
     }
+   
     
     
 }
 
 .contentWrapper {
     @include baseWrapper;
+    h2 {
+        color: $text-light !important;
+    }
     padding: 3rem;
 }

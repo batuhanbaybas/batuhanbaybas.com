@@ -1,0 +1,12 @@
+@import "../../styles/variables.scss";
+
+
+.single-post {
+    color : $text-light !important;
+    pre {
+        margin: 10px 0 !important;
+        padding: 10px !important;
+        background-color: $primary-black !important;
+        color: $text-light !important;
+    }
+}

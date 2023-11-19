@@ -1,5 +1,6 @@
 import { Typography } from "antd";
 import { useParams } from "react-router-dom";
+import "./style.scss";
 import MainLayout from "../../components/layouts/main/Main";
 import useFetch from "../../hooks/useFetch";
 import Error from "../../components/error/Error";
@@ -15,7 +16,11 @@ const SingleBlog = () => {
       <Loading loading={loading}>
         <div className="single-post">
           <Typography.Title level={2}>{data?.title}</Typography.Title>
-          <Typography.Text>{data?.content}</Typography.Text>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: data?.content
+            }}
+          />
         </div>
       </Loading>
     </MainLayout>
