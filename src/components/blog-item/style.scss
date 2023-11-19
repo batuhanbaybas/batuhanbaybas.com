@@ -1,3 +1,45 @@
+@import "../../styles/variables.scss";
+
+
 .blog-card {
     height: 70% !important;
+ 
+   
+}
+
+.card {
+    cursor: pointer;
+    height: 300px;
+    .ant-card-head-wrapper {
+        @media screen and (max-width: 768px) {
+          display: flex !important;
+          justify-content: center !important;
+          align-items: center !important;
+          flex-direction: column-reverse !important;
+            
+        }
+        .ant-card-extra {
+            @media screen and (max-width: 768px) {
+              text-align: center !important;
+            }
+        
+        }
+    }
+}
+
+
+.blog-item-title {
+    display: flex !important;
+    justify-content: center !important;
+    .typography-title {
+        text-align: center !important;
+        font-size: $font-large !important; ;
+        margin-bottom: 0 !important;
+        @media screen and (max-width: 768px) {
+            font-size: $font-small !important;
+            margin-bottom: 0 !important;
+
+            
+        }
+    }
 }
