@@ -60,11 +60,6 @@ const Home = () => {
           </Col>
         ))}
       </Row>
-      <Row>
-        <Button danger type="primary" size="large">
-          Download CV
-        </Button>
-      </Row>
     </MainLayout>
   );
 };
