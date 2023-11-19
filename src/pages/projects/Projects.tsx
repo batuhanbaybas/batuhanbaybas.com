@@ -13,13 +13,13 @@ const Projects = () => {
       {error && <Error />}
       <Loading loading={loading} />
       <Row className="h-85" gutter={[24, 4]}>
-        {data?.projects?.map((item: any) => (
+        {data?.map((item: any) => (
           <ProjectItem
             key={item._id}
             description={item.description}
-            image={item.image}
             link={item.link}
             title={item.title}
+            techs={item?.techs}
           />
         ))}
       </Row>

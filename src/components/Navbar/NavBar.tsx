@@ -1,7 +1,7 @@
 import { Layout } from "antd";
 import React from "react";
 import { Link } from "react-router-dom";
-import "./navbar.scss";
+import "./style.scss";
 const NavBar = () => {
   return (
     <Layout.Header className="navbar">

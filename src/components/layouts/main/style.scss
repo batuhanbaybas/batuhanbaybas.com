@@ -2,9 +2,9 @@
 
 
 @mixin baseWrapper {
-   
-    background-color: $background-dark;
     min-height: calc(100vh - 64px);
+
+    background-color: $background-dark;
     h1 {
         color: $text-light !important;
     }
@@ -30,8 +30,14 @@
     align-items: center;
     justify-content: center;
     padding: 15rem 3rem;
+    
     h1 {
-        font-size: $font-xlarge
+        font-size: $font-xlarge;
+        @media screen and (max-width: $screen-md) {
+            font-size: $font-medium;
+            text-align: center;
+            
+        }
     }
     h3 {
         font-size: $font-medium
@@ -42,6 +48,5 @@
 
 .contentWrapper {
     @include baseWrapper;
-    height: calc(100vh - 160px);
     padding: 3rem;
 }

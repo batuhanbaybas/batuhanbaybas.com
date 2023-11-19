@@ -14,8 +14,8 @@ const SingleBlog = () => {
       {error && <Error />}
       <Loading loading={loading}>
         <div className="single-post">
-          <Typography.Title level={2}>{data?.post?.title}</Typography.Title>
-          <Typography.Text>{data?.post?.content}</Typography.Text>
+          <Typography.Title level={2}>{data?.title}</Typography.Title>
+          <Typography.Text>{data?.content}</Typography.Text>
         </div>
       </Loading>
     </MainLayout>
