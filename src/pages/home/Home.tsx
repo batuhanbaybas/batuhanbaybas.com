@@ -1,6 +1,6 @@
 import MainLayout from "../../components/layouts/main/Main";
 import { BiLogoLinkedin, BiLogoGmail } from "react-icons/bi";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaMedium } from "react-icons/fa";
 import "./style.scss";
 import { Button, Col, Row, Typography } from "antd";
 
@@ -31,13 +31,19 @@ const iconMenu: IconMenu[] = [
     target: "_blank",
     type: "primary",
     danger: true
+  },
+  {
+    icon: <FaMedium size={24} />,
+    url: "https://medium.com/@b.baybas",
+    target: "_blank",
+    type: "default"
   }
 ];
 
 const Home = () => {
   return (
     <MainLayout home={true}>
-      <Typography.Title level={1}> Hello I'm Batuhan</Typography.Title>
+      <Typography.Title level={1}> Hello I'm Batuhan 👋 </Typography.Title>
       <Typography.Title level={3}>I'm a Software Developer</Typography.Title>
       <Row
         gutter={12}

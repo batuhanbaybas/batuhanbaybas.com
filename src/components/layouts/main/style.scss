@@ -2,15 +2,9 @@
 
 
 @mixin baseWrapper {
-    min-height: calc(100vh - 64px);
+    min-height: 100vh;
 
     background-color: $background-dark;
-  
-    .single-post{
-        span {
-            color: $text-light !important;
-        }
-    }
   
    
 }
@@ -39,12 +33,4 @@
    
     
     
-}
-
-.contentWrapper {
-    @include baseWrapper;
-    h2 {
-        color: $text-light !important;
-    }
-    padding: 3rem;
 }
